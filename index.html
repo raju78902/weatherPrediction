@@ -166,7 +166,7 @@
 
 
         async function fetchAQIData(lat, lon) {
-            let fetchAQIData = await fetch(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=d28274b5fe592e1f1e558103a5e66370`)
+            let fetchAQIData = await fetch(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=3d814a3a0a90184abb5e11a98ff2e726`)
             let formattedData = await fetchAQIData.json();
             console.log('AQI Data: ', formattedData);
             let list = formattedData.list[0].components;
@@ -184,7 +184,7 @@
 
         async function nextFiveDays(lat, lon) {
 
-            const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=d28274b5fe592e1f1e558103a5e66370&units=metric`;
+            const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=3d814a3a0a90184abb5e11a98ff2e726&units=metric`;
             try {
                 const response = await fetch(apiUrl);
                 if (!response.ok) {
@@ -231,7 +231,7 @@
         }
 
         async function todayTemps(lat, lon) {
-            const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=d28274b5fe592e1f1e558103a5e66370&units=metric`;
+            const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=3d814a3a0a90184abb5e11a98ff2e726&units=metric`;
 
             try {
                 const response = await fetch(apiUrl);
@@ -272,7 +272,7 @@
         async function fetchData() {
 
             let cityName = document.getElementsByClassName('inputfield')[0].value;
-            let requestData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=d28274b5fe592e1f1e558103a5e66370&units=metric`)
+            let requestData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=3d814a3a0a90184abb5e11a98ff2e726&units=metric`)
             let formattedData = await requestData.json();
             console.log("Formatted Data: ", formattedData);
 
